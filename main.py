@@ -35,4 +35,4 @@ for i in range(num_episodes):
     rList.append(r_all)
 
 print("Score over time: " + str(sum(rList) / num_episodes))  
-print(Q)
+print("Times won: ", len(list(filter(lambda x: x > 0, rList))))
