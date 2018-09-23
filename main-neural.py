@@ -53,14 +53,14 @@ with tf.Session() as sess:
             # Get a new state and reward from the environment
             state1, reward, end, _ = env.step(a[0])
             # Get the Q value by feeding it through the network
-            Q1 = sess.run(Qout, feed_dict={inputs1: np.identity(16)[s:s + 1]})
+            Q1 = sess.run(Qout, feed_dict={inputs1: np.identity(16)[state1:state1 + 1]})
             # Get the max Q value and set the target value for our agents chosen action
             maxQ1 = np.max(Q1)
             targetQ = allQ
             targetQ[0, a[0]] = reward + y * maxQ1
 
             # train our network using target and predicted Q values
-            _, W1 = sess.run([updateModel, W], feed_dict={inputs1: np.identity(16)[s : s + 1, nextQ: targetQ]})
+            _, W1 = sess.run([updateModel, W], feed_dict={inputs1: np.identity(16)[s:s+1], nextQ:targetQ})
             rAll += reward
             s = state1
             if end == True:
