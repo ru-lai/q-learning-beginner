@@ -7,5 +7,5 @@
 
 ## TODO
 - TODO Add documentation to QTable Implementation
-- TODO Finish implementing neural net
+- DONE Finish implementing neural net
 
