@@ -28,7 +28,7 @@ trainer = tf.train.GradientDescentOptimizer(learning_rate=0.1)
 updateModel = trainer.minimize(loss)
 
 # train the network
-init = tf.initialize_all_variables()
+init = tf.global_variables_initializer()
 
 # Set learning parameters
 y = 0.99
