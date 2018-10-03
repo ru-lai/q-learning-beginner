@@ -18,3 +18,8 @@ $ sudo apt-get install libjpeg-turbo8-dev
 
 However, I didn't run this on an Ubuntu system, so I can't verify whether or not it will work.
 
+## Stuck in Dependency Hell i.e. Just a Step Too Slow
+I guess one of the biggest issues with a quickly moving field is that the environments move quick as well.
+Utilizing a specific book, I learned how the policy gradient and some RL environment programming works.  However, by the time I actually implemented (copied) and learned (understood) the code, the universe import and environemnts were already deprecated.
+Because of this, I needed to actually look for a comparable game that can be used to train the agent.
+
